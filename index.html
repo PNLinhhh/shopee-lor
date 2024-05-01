@@ -3,11 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mua bán bọn 12D6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Shopee 12D6-K2 | Mua Và Bán Hàng Tồn Kho</title>
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/icon_favicon_1_32.0Wecxv.png">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/resposive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
@@ -17,15 +21,16 @@
     <div class="app">
         <!-- header -->
         <header class="header">
-            <div class="grid">
+            <div class="grid wide">
                 <!-- nav -->
-                <nav class="header__navbar">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--qr">
                             Ủng hộ hoàn cảnh ấm no không thiếu thốn
                             <!-- qr code -->
                             <div class="header__qr">
-                                <img src="./assets/img/qr-code.jpg" alt="QR code" class="header__qr-img">
+                                <img src="./assets/img/qr-code.jpg"
+                                    alt="QR code" class="header__qr-img">
                             </div>
                         </li>
                         <span class="navbar-item--separate"></span>
@@ -131,8 +136,12 @@
 
                 <!-- header with search -->
                 <div class="header-with-search">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+
                     <!-- logo -->
-                    <div class="header__logo">
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -144,7 +153,9 @@
                         </a>
                     </div>
                     <!-- search -->
-                    <div class="header__search">
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
+                    <div class="header__search ">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input"
                                 placeholder="Shopee bao ship 0đ - Ưu đãi dành riêng cho 12D6">
@@ -182,7 +193,7 @@
                         <button class="header__search-btn">
                             <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <div class="header__other-products">
+                        <div class="header__other-products hide-on-mobile-tablet">
                             <a href="" class="header__other-item">I Phone 14 Pro Max</a>
                             <a href="" class="header__other-item">I Phone 15 Pro Max</a>
                             <a href="" class="header__other-item">I Phone 15</a>
@@ -197,12 +208,15 @@
                         </div>
                     </div>
 
-
                     <!-- cart -->
                     <div class="header__cart">
                         <div class="header__cart-wrap">
-                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
-                            <span class="header__cart-notice">3</span>
+                            <label for="mobile__cart-checkbox">
+                                <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                                <span class="header__cart-notice">3</span>
+                            </label>
+
+                            <input type="checkbox" hidden id="mobile__cart-checkbox" class="header__cart-checkbox">
 
                             <div class="header__cart-list ">
                                 <!-- no cart: .list--no-cart -->
@@ -274,15 +288,29 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Tất cả</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Nam</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Nữ</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Chiều cao</a>
+                </li>
+            </ul>
         </header>
         <!-- end header -->
 
         <!-- container -->
         <div class="app__container">
-            <div class="gird">
-                <div class="grid__row app__content">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
                     <!--  danh mục -->
-                    <div class="grid__column-2">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="caterogy">
                             <h3 class="caterogy__heading">
                                 <i class="caterogy__heading-icon fa-solid fa-list-ul"></i>Danh sách 12D6
@@ -293,28 +321,36 @@
                                     <a href="" class="caterogy-item__link ">Họ Nguyễn</a>
                                 </li>
                                 <li class="caterogy-item">
-                                    <a href="" class="caterogy-item__link">Họ Trần</a>
+                                    <a href="" class="caterogy-item__link"><span class="mobile-category__name
+                                        ">Họ Trần</span></a>
                                 </li>
                                 <li class="caterogy-item">
-                                    <a href="" class="caterogy-item__link">Họ Lê</a>
+                                    <a href="" class="caterogy-item__link"><span class="mobile-category__name
+                                        ">Họ Lê</span></a>
                                 </li>
                                 <li class="caterogy-item">
-                                    <a href="" class="caterogy-item__link">Họ Đào</a>
+                                    <a href="" class="caterogy-item__link"><span class="mobile-category__name
+                                        ">Họ Đào</span></a>
                                 </li>
                                 <li class="caterogy-item">
-                                    <a href="" class="caterogy-item__link">Họ Vũ</a>
+                                    <a href="" class="caterogy-item__link"><span class="mobile-category__name
+                                        ">Họ Vũ</span></a>
                                 </li>
                                 <li class="caterogy-item">
-                                    <a href="" class="caterogy-item__link">Họ Lục</a>
+                                    <a href="" class="caterogy-item__link"><span class="mobile-category__name
+                                        ">Họ Lục</span></a>
                                 </li>
                                 <li class="caterogy-item">
-                                    <a href="" class="caterogy-item__link">Họ Lã</a>
+                                    <a href="" class="caterogy-item__link"><span class="mobile-category__name
+                                        ">Họ Lã</span></a>
                                 </li>
                                 <li class="caterogy-item">
-                                    <a href="" class="caterogy-item__link">Họ Hà</a>
+                                    <a href="" class="caterogy-item__link"><span class="mobile-category__name
+                                        ">Họ Hà</span></a>
                                 </li>
                                 <li class="caterogy-item">
-                                    <a href="" class="caterogy-item__link">Họ Bùi</a>
+                                    <a href="" class="caterogy-item__link"><span class="mobile-category__name
+                                        ">Họ Bùi</span></a>
                                 </li>
                                 <li class="caterogy-item caterogy-item--active">
                                     <a href="" class="caterogy-item__link ">Tất Cả</a>
@@ -324,8 +360,8 @@
                     </div>
 
                     <!-- shop -->
-                    <div class="grid__column-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn btn--primary">Phổ biến</button>
                             <button class="home-filter__btn btn">Hiếm</button>
@@ -360,9 +396,46 @@
                             </div>
                         </div>
 
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link"><span class="mobile-category__name
+                                        ">Họ Trần</span></a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link"><span class="mobile-category__name
+                                        ">Họ Nguyễn</span></a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link"><span class="mobile-category__name
+                                        ">Họ Đào</span></a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link"><span class="mobile-category__name
+                                        ">Họ Đặng</span></a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link"><span class="mobile-category__name
+                                        ">Họ Lê</span></a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link"><span class="mobile-category__name
+                                        ">Họ Lưu</span></a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link"><span class="mobile-category__name
+                                        ">Họ Bùi</span></a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link"><span class="mobile-category__name
+                                        ">Họ Hà</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+
                         <div class="home-product">
-                            <div class="grid__row">
-                                <div class="grid__column-2-4">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -406,7 +479,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -450,7 +523,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -493,7 +566,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -537,7 +610,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -581,7 +654,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img gia-an"
@@ -625,7 +698,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -669,7 +742,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -713,7 +786,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -757,7 +830,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -801,7 +874,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -809,7 +882,8 @@
                                         </div>
                                         <!-- thông tin sp -->
                                         <div class="home-product-info">
-                                            <div class="home-product-item__name">Đặng Hồng Quân (thợ cắt tóc kiêm thợ pha chế, còn gọi là ba ten đơ)</div>
+                                            <div class="home-product-item__name">Đặng Hồng Quân (thợ cắt tóc kiêm thợ
+                                                pha chế, còn gọi là ba ten đơ)</div>
 
                                             <div class="home-product-item__price">
                                                 <div class="home-product-item__price-current">đ24.042.003</div>
@@ -844,7 +918,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -888,7 +962,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -932,7 +1006,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -976,7 +1050,7 @@
 
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <!-- ảnh sp -->
                                         <div class="home-product-item__img"
@@ -1054,9 +1128,9 @@
 
         <!-- footer -->
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row footer__mb-30">
-                    <div class="grid__column-2-4">
+            <div class="grid wide">
+                <div class="row footer__mb-30">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -1079,7 +1153,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">VỀ 12D6</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -1102,7 +1176,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">THANH TOÁN</h3>
                         <div class="footer__pay">
                             <img src="./assets/img/visa.png" alt="" class="footer__pay-img">
@@ -1115,7 +1189,7 @@
                             <img src="./assets/img/spaylater.png" alt="" class="footer__pay-img">
                         </div>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">THEO DÕI CHÚNG TÔI TRÊN</h3>
                         <ul class="footer-list">
                             <a href="" class="footer-item__link">
@@ -1132,7 +1206,7 @@
                             </a>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">QUÉT MÃ BẰNG APP NGÂN HÀNG</h3>
                         <div class="footer__download">
                             <img src="./assets/img/qr-code-nh.jpg" alt="qr code" class="footer__download-qr">
@@ -1153,8 +1227,8 @@
             </div>
 
             <div class="footer__nation">
-                <div class="grid">
-                    <div class="grid__row footer__nation-away">
+                <div class="grid wide">
+                    <div class="row footer__nation-away">
                         <div class="footer__nation-permission">© 2024 12D6. Tất cả các quyền được bảo lưu.</div>
                         <div class="footer__nation-item">
                             <div class="footer__nation-area">Quốc gia & Khu vực:</div>
@@ -1201,22 +1275,23 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <div class="footer__copyright-registration">
                         <a class="footer__copyright-registration-link" href="">
                             <img class="footer__copyright-registration-img"
                                 src="./assets/img/copyright-registration.png" alt="đã đăng kí bộ công thương">
                         </a>
                     </div>
-                    <p class="footer__text footer__text-company"> Công ty TNHH một mình tao </p>
-                    <p class="footer__text">Địa chỉ: Thôn Vĩnh Ninh, Xã Vĩnh Quỳnh, Thành phố Hà Nội, Việt Nam. Tổng đài
+                    <p class="footer__text footer__text-company"> Công ty TNHH Phong Đại Hiệp </p>
+                    <p class="footer__text">Địa chỉ: Thôn Vĩnh Ninh, Xã Vĩnh Quỳnh, Huyện Thanh Trì, Thành phố Hà Nội,
+                        Việt Nam. Tổng đài
                         hỗ trợ: 2151133514 - Email:
                         2151133514@e.tlu.edu.vn</p>
                     <p class="footer__text">Chịu Trách Nhiệm Quản Lý Nội Dung: Phạm Quốc Phong - Điện thoại liên hệ:
                         0971217803 (ext 4678)</p>
                     <p class="footer__text">Mã số doanh nghiệp: 001203012891 do Bộ Công An cấp
                         ngày 07/04/2021</p>
-                    <p class="footer__text">© 2024 - Bản quyền thuộc về Công ty TNHH một mình tao</p>
+                    <p class="footer__text">© 2024 - Bản quyền thuộc về Công ty TNHH Phong Đại Hiệp</p>
                 </div>
         </footer>
 

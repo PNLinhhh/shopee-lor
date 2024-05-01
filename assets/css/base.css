@@ -10,6 +10,7 @@
   --header-width-search-height: calc(
     var(--header-height) - var(--navbar-height)
   );
+  --header-sort-bar-height: 40px;
 }
 
 * {
@@ -104,6 +105,7 @@ html {
   margin: auto;
   z-index: 1;
   animation: growth linear 0.2s;
+  -webkit-animation: growth linear 0.2s;
 }
 
 /* btn style */
@@ -203,7 +205,7 @@ html {
   color: var(--white-color);
 }
 
-.pagination-item--active a:hover{
+.pagination-item--active a:hover {
   opacity: 0.8;
 }
 
@@ -221,4 +223,3 @@ html {
   height: var(--hight);
   line-height: var(--hight);
 }
-
